@@ -1,0 +1,133 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D0C511B3-6D97-DB20-6C42-27182DF6D335" name="NL_List">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-03-27 18:32:22 UTC</createdTime>
+<ownerDesignName>ARL</ownerDesignName>
+<engineerTo>
+<item key="25121BB5-4E23-D73E-2BE6-E48B7C6BC642" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="notice_list_id" id="FC3FE502-A7D3-DA72-AC35-B1BAC9FF738D">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-03-27 18:33:02 UTC</createdTime>
+<ownerDesignName>ARL</ownerDesignName>
+<engineerTo>
+<item key="25121BB5-4E23-D73E-2BE6-E48B7C6BC642" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="list_name" id="D5F936C3-2061-E15B-476E-D78374A044C8">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-03-27 18:33:19 UTC</createdTime>
+<ownerDesignName>ARL</ownerDesignName>
+<engineerTo>
+<item key="25121BB5-4E23-D73E-2BE6-E48B7C6BC642" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+</Attribute>
+<Attribute name="list_description" id="4173113A-D43B-89F3-746C-BC9B25EE5FC3">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-03-27 18:33:54 UTC</createdTime>
+<ownerDesignName>ARL</ownerDesignName>
+<engineerTo>
+<item key="25121BB5-4E23-D73E-2BE6-E48B7C6BC642" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+</Attribute>
+<Attribute name="external_view_name" id="1DCF9311-1CF9-91F1-C22C-CFA3B2E25DA9">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-03-27 18:34:23 UTC</createdTime>
+<ownerDesignName>ARL</ownerDesignName>
+<engineerTo>
+<item key="25121BB5-4E23-D73E-2BE6-E48B7C6BC642" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+</Attribute>
+<Attribute name="creation_date" id="6F437786-CBA6-DD42-2E74-6904E122741D">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-03-27 18:35:34 UTC</createdTime>
+<ownerDesignName>ARL</ownerDesignName>
+<engineerTo>
+<item key="25121BB5-4E23-D73E-2BE6-E48B7C6BC642" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+</Attribute>
+<Attribute name="list_status" id="777B659B-A654-9FA3-0592-5E88F2A405A6">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-03-27 18:35:47 UTC</createdTime>
+<ownerDesignName>ARL</ownerDesignName>
+<engineerTo>
+<item key="25121BB5-4E23-D73E-2BE6-E48B7C6BC642" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+</Attribute>
+<Attribute name="status_eff_date" id="DB2761DE-F13C-882B-759B-CD293C41132A">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-03-27 18:36:23 UTC</createdTime>
+<ownerDesignName>ARL</ownerDesignName>
+<engineerTo>
+<item key="25121BB5-4E23-D73E-2BE6-E48B7C6BC642" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+</Attribute>
+<Attribute name="division_id" id="73FE113F-0D4A-7E66-DDB8-9FC688406263">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-04-24 21:14:19 UTC</createdTime>
+<generatorID>69C2AFA4-64D9-3568-1A09-6CC1D66A2D29</generatorID>
+<ownerDesignName>ARL</ownerDesignName>
+<engineerTo>
+<item key="25121BB5-4E23-D73E-2BE6-E48B7C6BC642" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>C3613A83-2B95-CDCC-33BA-152662B2C553</referedAttribute>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="06070118-245B-AE69-1CE0-577DBBDBE5A9" name="{entity} PK">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-03-27 18:33:18 UTC</createdTime>
+<ownerDesignName>ARL</ownerDesignName>
+<engineerTo>
+<item key="25121BB5-4E23-D73E-2BE6-E48B7C6BC642" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FC3FE502-A7D3-DA72-AC35-B1BAC9FF738D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
