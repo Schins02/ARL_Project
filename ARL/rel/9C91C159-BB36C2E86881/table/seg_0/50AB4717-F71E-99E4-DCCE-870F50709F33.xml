@@ -1,0 +1,126 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="50AB4717-F71E-99E4-DCCE-870F50709F33" name="NL_Members">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-04-26 20:58:51 UTC</createdTime>
+<generatorID>C1C82577-60E0-D609-D29B-835C976AE454</generatorID>
+<ownerDesignName>ARL</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="list_member_id" id="88D10D56-5947-B256-A41E-946EDB245D60">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-04-26 20:58:51 UTC</createdTime>
+<generatorID>307474F6-331F-A985-A3FD-D77B3A631537</generatorID>
+<ownerDesignName>ARL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="date_added" id="3CEB0500-84A5-F103-D816-45F7A43D87CE">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-04-26 20:58:51 UTC</createdTime>
+<generatorID>36BF14BD-64E2-5B08-F294-CF5832358C18</generatorID>
+<ownerDesignName>ARL</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NL_List_notice_list_id" id="B56D0AD7-B171-85A5-CF33-23C866370377">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-04-26 20:58:51 UTC</createdTime>
+<generatorID>D81671EA-7110-E118-1B28-F221B654F03D</generatorID>
+<ownerDesignName>ARL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>88CCC593-BB18-7B88-F82F-64B9DD8D3FFD</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FA35FF38-866C-64D6-A54D-85463DED75FD" referredColumn="88CCC593-BB18-7B88-F82F-64B9DD8D3FFD"/>
+</associations>
+</Column>
+<Column name="NL_List_notice_list_id1" id="3EA0996C-C4D6-5BF0-5BDD-D210BA536648">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-04-26 20:58:51 UTC</createdTime>
+<generatorID>E4D54299-69FE-7821-B57B-EDFA9E925FB1</generatorID>
+<ownerDesignName>ARL</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>88CCC593-BB18-7B88-F82F-64B9DD8D3FFD</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2628AAD3-CF42-8548-2A1C-2B0E9CBA570D" referredColumn="88CCC593-BB18-7B88-F82F-64B9DD8D3FFD"/>
+</associations>
+</Column>
+<Column name="NL_Employees_employee_id" id="5D668E6B-E768-05F7-68E5-366BBE41EE0C">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-04-26 20:58:51 UTC</createdTime>
+<generatorID>D534023B-2EA4-BE97-F09E-B046D6E57AE3</generatorID>
+<ownerDesignName>ARL</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>8C7073B9-3D4B-62A4-7280-0B8E53FBF08C</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="52C01D48-0F7C-88E3-CFBC-27EAF73C242D" referredColumn="8C7073B9-3D4B-62A4-7280-0B8E53FBF08C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4DB42677-765F-783A-D4FB-3D6D057FB910" name="NL_Members_PK">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-04-26 20:58:51 UTC</createdTime>
+<generatorID>3A554766-9B73-B954-8ECF-E8388C17E9BF</generatorID>
+<ownerDesignName>ARL</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="88D10D56-5947-B256-A41E-946EDB245D60"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9E5F07F7-8678-7917-BD68-C44B816116A8" name="NL_Members_NL_Employees_FK">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-04-26 20:58:51 UTC</createdTime>
+<generatorID>E32DE6FC-6E58-670E-59B2-78D6D1FA87F8</generatorID>
+<ownerDesignName>ARL</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5D668E6B-E768-05F7-68E5-366BBE41EE0C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5B95FE46-D002-B39C-B049-170FC87D251C" name="NL_Members_NL_List_FK">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-04-26 20:58:51 UTC</createdTime>
+<generatorID>F793DC9B-1A8D-6287-39B7-66270369FCC2</generatorID>
+<ownerDesignName>ARL</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B56D0AD7-B171-85A5-CF33-23C866370377"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CF6CCFEB-1757-2B2E-C59E-86D298E30D23" name="NL_Members_NL_List_FKv1">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-04-26 20:58:51 UTC</createdTime>
+<generatorID>98B24CE3-899F-740A-7D08-193435A53A4F</generatorID>
+<ownerDesignName>ARL</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3EA0996C-C4D6-5BF0-5BDD-D210BA536648"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

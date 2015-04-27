@@ -1,0 +1,134 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D0231672-125A-419E-24AF-96A801D3D1B9" name="NL_Document">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-04-23 19:30:37 UTC</createdTime>
+<ownerDesignName>ARL</ownerDesignName>
+<engineerTo>
+<item key="9C91C159-B84D-ADD7-3433-BB36C2E86881" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="document_id" id="8B85CB96-3866-62E6-4404-EF17A82B21C6">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-04-23 19:30:52 UTC</createdTime>
+<ownerDesignName>ARL</ownerDesignName>
+<engineerTo>
+<item key="9C91C159-B84D-ADD7-3433-BB36C2E86881" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="filename" id="4D9D8AAD-81C3-6C00-1DF0-7A9708D36137">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-04-23 19:31:05 UTC</createdTime>
+<ownerDesignName>ARL</ownerDesignName>
+<engineerTo>
+<item key="9C91C159-B84D-ADD7-3433-BB36C2E86881" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+</Attribute>
+<Attribute name="filemimetype" id="DA1C16FE-746B-9BC7-1BC7-4747B594CB20">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-04-23 19:32:17 UTC</createdTime>
+<ownerDesignName>ARL</ownerDesignName>
+<engineerTo>
+<item key="9C91C159-B84D-ADD7-3433-BB36C2E86881" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>512</dataTypeSize>
+</Attribute>
+<Attribute name="file_charset" id="DA66094E-633C-7CE7-02E9-CF6BAC207343">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-04-23 19:32:35 UTC</createdTime>
+<ownerDesignName>ARL</ownerDesignName>
+<engineerTo>
+<item key="9C91C159-B84D-ADD7-3433-BB36C2E86881" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>512</dataTypeSize>
+</Attribute>
+<Attribute name="file_data" id="59B232EB-FACA-E1C5-B6E6-0724B7A04E85">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-04-23 19:32:52 UTC</createdTime>
+<ownerDesignName>ARL</ownerDesignName>
+<engineerTo>
+<item key="9C91C159-B84D-ADD7-3433-BB36C2E86881" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT029</logicalDatatype>
+</Attribute>
+<Attribute name="file_comment" id="82694CF0-6507-9FD2-0195-1B3928070E82">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-04-23 19:33:09 UTC</createdTime>
+<ownerDesignName>ARL</ownerDesignName>
+<engineerTo>
+<item key="9C91C159-B84D-ADD7-3433-BB36C2E86881" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+</Attribute>
+<Attribute name="tags" id="B8577929-0B83-BCBA-E9B6-44711B103DF8">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-04-23 19:33:27 UTC</createdTime>
+<ownerDesignName>ARL</ownerDesignName>
+<engineerTo>
+<item key="9C91C159-B84D-ADD7-3433-BB36C2E86881" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+</Attribute>
+<Attribute name="list_member_id" id="D44892FA-414B-34A1-6DAA-A266B5E72918">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-04-23 19:33:59 UTC</createdTime>
+<generatorID>28CDF875-71C7-6E86-6E04-FEB58922BE82</generatorID>
+<ownerDesignName>ARL</ownerDesignName>
+<engineerTo>
+<item key="9C91C159-B84D-ADD7-3433-BB36C2E86881" value="true"/>
+</engineerTo>
+<referedAttribute>307474F6-331F-A985-A3FD-D77B3A631537</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E541B343-5B7D-E6B3-7F62-3FB4FC17464F" name="{entity} PK">
+<createdBy>johnschindler</createdBy>
+<createdTime>2015-04-26 20:58:15 UTC</createdTime>
+<ownerDesignName>ARL</ownerDesignName>
+<engineerTo>
+<item key="9C91C159-B84D-ADD7-3433-BB36C2E86881" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8B85CB96-3866-62E6-4404-EF17A82B21C6</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

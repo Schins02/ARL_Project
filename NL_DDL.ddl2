@@ -1,0 +1,80 @@
+DROP SEQUENCE NL_Division_seq ; 
+create sequence NL_Division_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+DROP TRIGGER NL_Division_PK_trig 
+; 
+
+create or replace trigger NL_Division_PK_trig 
+before insert on NL_Division
+for each row 
+begin 
+select NL_Division_seq.nextval into :new.division_id from dual; 
+end; 
+/
+
+DROP SEQUENCE NL_Employees_seq ; 
+create sequence NL_Employees_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+DROP TRIGGER NL_Employees_PK_trig 
+; 
+
+create or replace trigger NL_Employees_PK_trig 
+before insert on NL_Employees
+for each row 
+begin 
+select NL_Employees_seq.nextval into :new.employee_id from dual; 
+end; 
+/
+
+DROP SEQUENCE NL_List_seq ; 
+create sequence NL_List_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+DROP TRIGGER NL_List_PK_trig 
+; 
+
+create or replace trigger NL_List_PK_trig 
+before insert on NL_List
+for each row 
+begin 
+select NL_List_seq.nextval into :new.notice_list_id from dual; 
+end; 
+/
+
+DROP SEQUENCE NL_Members_seq ; 
+create sequence NL_Members_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+DROP TRIGGER NL_Members_PK_trig 
+; 
+
+create or replace trigger NL_Members_PK_trig 
+before insert on NL_Members
+for each row 
+begin 
+select NL_Members_seq.nextval into :new.list_member_id from dual; 
+end; 
+/
+
+DROP INDEX NL_Members_list_member_FK_0 ;
+CREATE INDEX NL_Members_list_member_FK_0 ON NL_Document(NL_Members_list_member_id) ;
+DROP INDEX NL_Division_division_i_FK_1 ;
+CREATE INDEX NL_Division_division_i_FK_1 ON NL_Employees(NL_Division_division_id) ;
+DROP INDEX NL_Division_division_i_FK_2 ;
+CREATE INDEX NL_Division_division_i_FK_2 ON NL_List(NL_Division_division_id) ;
+DROP INDEX NL_Employees_employee__FK_3 ;
+CREATE INDEX NL_Employees_employee__FK_3 ON NL_Members(NL_Employees_employee_id) ;
+DROP INDEX NL_List_notice_list_id_FK_4 ;
+CREATE INDEX NL_List_notice_list_id_FK_4 ON NL_Members(NL_List_notice_list_id) ;
+DROP INDEX NL_List_notice_list_id_FK_5 ;
+CREATE INDEX NL_List_notice_list_id_FK_5 ON NL_Members(NL_List_notice_list_id1) ;
