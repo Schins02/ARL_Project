@@ -27,7 +27,7 @@ prompt APPLICATION 92218 - ARL_Lists
 -- Application Export:
 --   Application:     92218
 --   Name:            ARL_Lists
---   Date and Time:   22:46 Tuesday April 28, 2015
+--   Date and Time:   18:02 Wednesday April 29, 2015
 --   Exported By:     JOHN.SCHINDLER@UTEXAS.EDU
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -110,7 +110,7 @@ wwv_flow_api.create_flow(
 ,p_rejoin_existing_sessions=>'N'
 ,p_csv_encoding=>'Y'
 ,p_last_updated_by=>'JOHN.SCHINDLER@UTEXAS.EDU'
-,p_last_upd_yyyymmddhh24miss=>'20150428223247'
+,p_last_upd_yyyymmddhh24miss=>'20150429175623'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_ui_type_name => null
 );
@@ -10328,7 +10328,7 @@ wwv_flow_api.create_page(
 ,p_cache_mode=>'NOCACHE'
 ,p_help_text=>'No help is available for this page.'
 ,p_last_updated_by=>'JOHN.SCHINDLER@UTEXAS.EDU'
-,p_last_upd_yyyymmddhh24miss=>'20150428205643'
+,p_last_upd_yyyymmddhh24miss=>'20150429174906'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(3539457218282252120)
@@ -10371,7 +10371,7 @@ wwv_flow_api.create_report_region(
 ,p_component_template_options=>'#DEFAULT#:t-Report--altRowsDefault:t-Report--rowHighlight'
 ,p_display_point=>'BODY'
 ,p_source=>wwv_flow_utilities.join(wwv_flow_t_varchar2(
-'SELECT e.employee_id, employee_name, employee_lab, employee_status, status_effective_date, admin, standard_list_user, NL_Division_division_id "Division ID", NL_List_notice_list_id "List ID"',
+'SELECT DISTINCT e.employee_id, employee_name, employee_lab, employee_status, status_effective_date, admin, standard_list_user, d.division_code',
 'FROM NL_Employees e LEFT JOIN NL_Division d ON e.NL_Division_division_id = d.division_id',
 'LEFT JOIN NL_Members m ON e.employee_id = m.NL_Employees_employee_id',
 'WHERE LOWER(e.employee_name) LIKE ''%'' || LOWER(:P11_SEARCH) || ''%'';'))
@@ -10412,7 +10412,7 @@ wwv_flow_api.create_report_columns(
  p_id=>wwv_flow_api.id(3540353542336333459)
 ,p_query_column_id=>3
 ,p_column_alias=>'EMPLOYEE_LAB'
-,p_column_display_sequence=>3
+,p_column_display_sequence=>4
 ,p_column_heading=>'Employee Lab'
 );
 wwv_flow_api.create_report_columns(
@@ -10426,7 +10426,7 @@ wwv_flow_api.create_report_columns(
  p_id=>wwv_flow_api.id(3540354312761333460)
 ,p_query_column_id=>5
 ,p_column_alias=>'STATUS_EFFECTIVE_DATE'
-,p_column_display_sequence=>4
+,p_column_display_sequence=>3
 ,p_column_heading=>'Status Effective Date'
 );
 wwv_flow_api.create_report_columns(
@@ -10444,18 +10444,11 @@ wwv_flow_api.create_report_columns(
 ,p_column_heading=>'Standard List User'
 );
 wwv_flow_api.create_report_columns(
- p_id=>wwv_flow_api.id(3540734064544372774)
+ p_id=>wwv_flow_api.id(3850218748745868704)
 ,p_query_column_id=>8
-,p_column_alias=>'Division ID'
+,p_column_alias=>'DIVISION_CODE'
 ,p_column_display_sequence=>8
-,p_column_heading=>'Division Id'
-);
-wwv_flow_api.create_report_columns(
- p_id=>wwv_flow_api.id(3540734357673372774)
-,p_query_column_id=>9
-,p_column_alias=>'List ID'
-,p_column_display_sequence=>9
-,p_column_heading=>'List Id'
+,p_column_heading=>'Division Code'
 );
 wwv_flow_api.create_report_region(
  p_id=>wwv_flow_api.id(3541241420063417053)
@@ -10661,6 +10654,41 @@ wwv_flow_api.create_report_columns(
 ,p_column_alias=>'NL_MEMBERS_LIST_MEMBER_ID'
 ,p_column_display_sequence=>8
 ,p_column_heading=>'Nl Members List Member Id'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(3850329393561885247)
+,p_query_column_id=>9
+,p_column_alias=>'CREATED'
+,p_column_display_sequence=>9
+,p_column_heading=>'Created'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(3850329752850885248)
+,p_query_column_id=>10
+,p_column_alias=>'CREATED_BY'
+,p_column_display_sequence=>10
+,p_column_heading=>'Created By'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(3850330113827885248)
+,p_query_column_id=>11
+,p_column_alias=>'ROW_VERSION_NUMBER'
+,p_column_display_sequence=>11
+,p_column_heading=>'Row Version Number'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(3850330577732885249)
+,p_query_column_id=>12
+,p_column_alias=>'UPDATED'
+,p_column_display_sequence=>12
+,p_column_heading=>'Updated'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(3850330992913885249)
+,p_query_column_id=>13
+,p_column_alias=>'UPDATED_BY'
+,p_column_display_sequence=>13
+,p_column_heading=>'Updated By'
 );
 wwv_flow_api.create_page_branch(
  p_id=>wwv_flow_api.id(3539810106550282491)
@@ -11034,7 +11062,7 @@ wwv_flow_api.create_page(
 ,p_cache_timeout_seconds=>21600
 ,p_help_text=>'No help is available for this page.'
 ,p_last_updated_by=>'JOHN.SCHINDLER@UTEXAS.EDU'
-,p_last_upd_yyyymmddhh24miss=>'20150428205056'
+,p_last_upd_yyyymmddhh24miss=>'20150429175623'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(3553977059770897946)
@@ -11143,17 +11171,15 @@ wwv_flow_api.create_page_item(
 ,p_prompt=>'Filename'
 ,p_source=>'FILENAME'
 ,p_source_type=>'DB_COLUMN'
-,p_display_as=>'NATIVE_TEXTAREA'
+,p_display_as=>'NATIVE_HIDDEN'
 ,p_cSize=>60
 ,p_cMaxlength=>4000
 ,p_cHeight=>4
 ,p_label_alignment=>'RIGHT'
 ,p_field_template=>wwv_flow_api.id(2818603921270863601)
 ,p_item_template_options=>'#DEFAULT#'
+,p_lov_display_extra=>'YES'
 ,p_attribute_01=>'Y'
-,p_attribute_02=>'N'
-,p_attribute_03=>'N'
-,p_attribute_04=>'BOTH'
 );
 wwv_flow_api.create_page_item(
  p_id=>wwv_flow_api.id(3553990486668898164)
@@ -11164,17 +11190,15 @@ wwv_flow_api.create_page_item(
 ,p_prompt=>'Filemimetype'
 ,p_source=>'FILEMIMETYPE'
 ,p_source_type=>'DB_COLUMN'
-,p_display_as=>'NATIVE_TEXTAREA'
+,p_display_as=>'NATIVE_HIDDEN'
 ,p_cSize=>60
 ,p_cMaxlength=>512
 ,p_cHeight=>4
 ,p_label_alignment=>'RIGHT'
 ,p_field_template=>wwv_flow_api.id(2818603921270863601)
 ,p_item_template_options=>'#DEFAULT#'
+,p_lov_display_extra=>'YES'
 ,p_attribute_01=>'Y'
-,p_attribute_02=>'N'
-,p_attribute_03=>'N'
-,p_attribute_04=>'BOTH'
 );
 wwv_flow_api.create_page_item(
  p_id=>wwv_flow_api.id(3553990802641898164)
@@ -11185,17 +11209,15 @@ wwv_flow_api.create_page_item(
 ,p_prompt=>'File Charset'
 ,p_source=>'FILE_CHARSET'
 ,p_source_type=>'DB_COLUMN'
-,p_display_as=>'NATIVE_TEXTAREA'
+,p_display_as=>'NATIVE_HIDDEN'
 ,p_cSize=>60
 ,p_cMaxlength=>512
 ,p_cHeight=>4
 ,p_label_alignment=>'RIGHT'
 ,p_field_template=>wwv_flow_api.id(2818603921270863601)
 ,p_item_template_options=>'#DEFAULT#'
+,p_lov_display_extra=>'YES'
 ,p_attribute_01=>'Y'
-,p_attribute_02=>'N'
-,p_attribute_03=>'N'
-,p_attribute_04=>'BOTH'
 );
 wwv_flow_api.create_page_item(
  p_id=>wwv_flow_api.id(3553991238153898165)
@@ -11275,7 +11297,7 @@ wwv_flow_api.create_page_item(
 ,p_source_type=>'DB_COLUMN'
 ,p_display_as=>'NATIVE_SELECT_LIST'
 ,p_lov=>wwv_flow_utilities.join(wwv_flow_t_varchar2(
-'select EMPLOYEE_NAME as display_value, m.list_member_id as return_value ',
+'select DISTINCT EMPLOYEE_NAME as display_value, m.list_member_id as return_value ',
 '  from NL_EMPLOYEES e, NL_MEMBERS m',
 'WHERE e.employee_id = m.nl_employees_employee_id',
 ' order by 1'))
